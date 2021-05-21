@@ -2,7 +2,7 @@
 
 - [LiveTCM: Restricted Natural Language and Model-based Adaptive Test Generation for Autonomous Driving](#livetcm--a-tool-with-restricted-natural-language-and-model-based-adaptive-test-generation-for-autonomous-driving)
   - [1. Contribution](#1-contribution)
-  - [2. Introduction](#2-introduction)
+  - [2. Overview](#2-Overview)
   - [3. Features of LiveTCM Tool](#3-features-of-livetcm-tool)
       - [1. Model Tree](#1-model-tree)
       - [2. TestSetup](#2-testsetup)
