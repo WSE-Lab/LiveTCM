@@ -12,7 +12,7 @@
         - [oracle verification flow](#oracle-verification-flow)
         - [global verification flow](#global-verification-flow)
       - [6. Dynamic generation](#6-dynamic-generation)
-      - [7. Reply execution](#7-reply-execution)
+      - [7. Replay execution](#7-replay-execution)
       - [8. Switch Mode & Pause and Stop execution](#8-switch-mode--pause-and-stop-execution)
 
 
@@ -27,7 +27,7 @@ An overview of LiveTCM is shown here. It supports the full life cycle testing of
 
 <img src="./figures/overview.png" alt="overview" width="500" align="bottom" />
 
-## 3. Demonstratin of the LiveTCM Tool
+## 3. Demonstration of the LiveTCM Tool
 
 Below, we demonstrate the key features of the LiveTCM tool.
 
@@ -35,27 +35,27 @@ Below, we demonstrate the key features of the LiveTCM tool.
 
 LiveTCM provides a model tree to create, modify, and delete model elements. 
 
-![Alt Text](./figures/ModelTree.gif)
+<img src="./figures/ModelTree.gif" alt="overview" width="800" align="bottom" />
 
 #### 2. TestSetup
 
 Testers can specify Test Setup in the Test Setup model view. It should include the basic flow and optionally one or more alternative flows.
 
-![Alt Text](./figures/TestSetup.gif)
+<img src="./figures/TestSetup.gif" alt="overview" width="800" align="bottom" />
 
 #### 3. TestCaseSpecification & Reference
 
 Testers can specify TestCaseSpecification in the TestCaseSpecification model view and refer to an existing test setup, then the view will import the test setup.
 
-![Alt Text](./figures/Reference.gif)
+<img src="./figures/Reference.gif" alt="overview" width="800" align="bottom" />
 
-![Alt Text](./figures/TestCaseSpecification.gif)
+<img src="./figures/TestCaseSpecification.gif" alt="overview" width="800" align="bottom" />
 
 #### 4. Auto-Completion
 
 Below, we demo the feature of the auto completion for APIs.
 
-![Alt Text](./figures/AutoCompletion.gif)
+<img src="./figures/AutoCompletion.gif" alt="overview" width="800" align="bottom" />
 
 #### 5. Alternative Flows
 
@@ -63,25 +63,25 @@ Below, we demo the feature of the auto completion for APIs.
 
 Testers can create an oracle verfication flow using the down arrow and make a link to the corresponding step in another flow of events.
 
-![Alt Text](./figures/oracleflow.gif)
+<img src="./figures/oracleflow.gif" alt="overview" width="800" align="bottom" />
 
 ##### global verification flow
 
 Global verification flow can be reused wiht the feature of copy and paste.
 
-![Alt Text](./figures/globalflow.gif)
+<img src="./figures/globalflow.gif" alt="overview" width="800" align="bottom" />
 
 #### 6. Dynamic generation
 
 LiveTCM automatically generates the basic flow.
 
-![Alt Text](./figures/dynamic.gif)
+<img src="./figures/dynamic.gif" alt="overview" width="800" align="bottom" />
 
-#### 7. Reply execution
+#### 7. Replay execution
 
 LiveTCM can replay a test scenario.
 
-![Alt Text](./figures/reply.gif)
+<img src="./figures/reply.gif" alt="overview" width="800" align="bottom" />
 
 #### 8. Switch Mode & Pause and Stop execution
 
