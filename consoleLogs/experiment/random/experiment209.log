@@ -1,0 +1,37 @@
+ timestamp= 1619788406000 [START] Now Run TCS Maintain Lane On Road1 Mode: dynamic Roadnum: 3 Second: 4
+ timestamp= 1619788406000 [SUCCESS] TCS Check Success 
+ timestamp= 1619788409000 [RUN] Run BasicFlow
+ timestamp= 1619788409000 [RUN] Generate steps
+ timestamp= 1619788409000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -244.8, "y": 10.12, "z": 465.33, "rain": 0.0, "fog": 0.0, "wetness": 0.0, "timeofday": 12.0, "signal": 1.0, "rx": 0.0, "ry": 305.81, "rz": -0.0, "speed": 0.0}
+ timestamp= 1619788409000 [RES] Validate result: 
+true
+ timestamp= 1619788409000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleMaintainLane(which_lane=Current_Lane&which_car=SUV).
+ timestamp= 1619788412000 [RES] API result: 
+{"pose_arr":[{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552630.27,"py":4182950.56},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552630.27,"py":4182950.56},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552630.27,"py":4182950.56},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552630.27,"py":4182950.56},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552630.27,"py":4182950.56},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552630.27,"py":4182950.56}],"traffic_light":[1,1,1,1,1],"state_arr":[{"acceleration":-3,"throttle":0,"steering_target":0.81,"brake":70,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":0.81,"brake":69.96,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":0.81,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":0.81,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":0.81,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":0.81,"brake":70,"steering_rate":100,"speed":0}],"obstacle_arr":[[],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182956.95,"x":552621.71,"z":10.12},"volume":9.62,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":-0.01,"z":0},"position":{"y":4182961.4,"x":552615.12,"z":10.12},"volume":12.5,"type":"VEHICLE","velocity":{"y":0.01,"x":-0.06,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182956.81,"x":552605.44,"z":10.21},"volume":8.86,"type":"VEHICLE","velocity":{"y":-0.26,"x":-0.6,"z":0}}],[{"acceleration":{"y":-0.01,"x":0,"z":0},"position":{"y":4182941.51,"x":552597.02,"z":11.06},"volume":0.3,"type":"VEHICLE","velocity":{"y":-1.29,"x":-1.23,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182930.44,"x":552589.8,"z":11.68},"volume":0,"type":"VEHICLE","velocity":{"y":-2.63,"x":-1.98,"z":0}}]],"action_description":"NPC vehicle (SUV) driving on the current lane","ev_state":[-244.802841186523,10.1248035430908,465.330169677734,0,0,0,12,1,0.00000717147850082256,305.809204101563,-0.00000846424063638551,0.000024241467905003494],"collision_probability":0}
+ timestamp= 1619788412000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619788412000 [RES] Global Validate result: 
+false
+ timestamp= 1619788412000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619788412000 [RES] Global Validate result: 
+true
+ timestamp= 1619788412000 [RUN] OffRoad == True
+ timestamp= 1619788412000 [RUN] The simulator S INVOKES API Command.Simulation.Stop() to stop simulation.
+ timestamp= 1619788412000 [WARNING] The test system Stop the Simulator S!
+ timestamp= 1619788412000 [RUN] ABORT.
+ timestamp= 1619788412000 [ERROR] The test system Abort!
+ timestamp= 1619788412000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619788412000 [RES] Global Validate result: 
+false
+ timestamp= 1619788412000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619788412000 [RES] Global Validate result: 
+false
+ timestamp= 1619788412000 [RES] Basic PostCondition Validate result: 
+false
+ timestamp= 1619788412000 [STOP] numberOfStep: 4 basicFlow: 
+[{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -244.8, \"y\": 10.12, \"z\": 465.33, \"rain\": 0.0, \"fog\": 0.0, \"wetness\": 0.0, \"timeofday\": 12.0, \"signal\": 1.0, \"rx\": 0.0, \"ry\": 305.81, \"rz\": -0.0, \"speed\": 0.0}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleMaintainLane(which_lane=Current_Lane&which_car=SUV).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": -3.0, \"throttle\": 0.0, \"steering_target\": 0.81, \"brake\": 70.0, \"steering_rate\": 100.0, \"speed\": 0.0}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"","natures":[]}]

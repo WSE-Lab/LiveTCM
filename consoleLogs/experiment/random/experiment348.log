@@ -1,0 +1,489 @@
+ timestamp= 1619797050000 [START] Now Run TCS Maintain Lane On Road1 Mode: dynamic Roadnum: 4 Second: 4
+ timestamp= 1619797050000 [SUCCESS] TCS Check Success 
+ timestamp= 1619797053000 [RUN] Run BasicFlow
+ timestamp= 1619797053000 [RUN] Generate steps
+ timestamp= 1619797053000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -440.05, "y": 10.12, "z": 215.34, "rain": 0.0, "fog": 0.0, "wetness": 0.0, "timeofday": 12.0, "signal": 1.0, "rx": 359.95, "ry": 209.95, "rz": 0.0, "speed": 2.54}
+ timestamp= 1619797053000 [RES] Validate result: 
+true
+ timestamp= 1619797053000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Weather.Fog(fog_level=Moderate).
+ timestamp= 1619797056000 [RES] API result: 
+{"pose_arr":[{"vx":-2.2,"ay":0.08,"az":9.82,"ax":-0.31,"pz":10.12,"vy":-2.2,"px":552434.61,"py":4182702.53},{"vx":-2.45,"ay":0.1,"az":9.81,"ax":-0.28,"pz":10.12,"vy":-2.45,"px":552433.47,"py":4182700.55},{"vx":-2.66,"ay":0.06,"az":9.81,"ax":-0.28,"pz":10.12,"vy":-2.66,"px":552432.4,"py":4182698.72},{"vx":-2.81,"ay":-0.25,"az":9.82,"ax":0.44,"pz":10.12,"vy":-2.81,"px":552431,"py":4182696.27},{"vx":-3.23,"ay":-0.5,"az":9.83,"ax":0.33,"pz":10.12,"vy":-3.23,"px":552429.92,"py":4182694.38},{"vx":-3,"ay":-0.18,"az":9.81,"ax":0.47,"pz":10.13,"vy":-3,"px":552428.7,"py":4182692.07}],"traffic_light":[1,1,3,0,0,0],"state_arr":[{"acceleration":0.42,"throttle":17.45,"steering_target":-0.41,"brake":0,"steering_rate":100,"speed":2.54},{"acceleration":0.36,"throttle":16.38,"steering_target":0.2,"brake":0,"steering_rate":100,"speed":2.8},{"acceleration":0.06,"throttle":24.46,"steering_target":0.1,"brake":0,"steering_rate":100,"speed":3.05},{"acceleration":-0.06,"throttle":0,"steering_target":0.04,"brake":14.5,"steering_rate":100,"speed":3.31},{"acceleration":-0.42,"throttle":0,"steering_target":4.88,"brake":14.5,"steering_rate":100,"speed":3.74},{"acceleration":-0.35,"throttle":0,"steering_target":12.6,"brake":14.5,"steering_rate":100,"speed":3.44}],"obstacle_arr":[[],[],[],[],[],[]],"action_description":"Moderate fog","ev_state":[-446.114532470703,10.1246728897095,204.268783569336,0,0.5,0,12,1,0.0319768600165844,204.839660644531,359.916870117188,3.177290515618964],"collision_probability":0}
+ timestamp= 1619797056000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797056000 [RES] Global Validate result: 
+false
+ timestamp= 1619797056000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797056000 [RES] Global Validate result: 
+false
+ timestamp= 1619797056000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797056000 [RES] Global Validate result: 
+false
+ timestamp= 1619797056000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797056000 [RES] Global Validate result: 
+false
+ timestamp= 1619797056000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": -0.35, "throttle": 0.0, "steering_target": 12.6, "brake": 14.5, "steering_rate": 100.0, "speed": 3.44}
+ timestamp= 1619797056000 [RES] Validate result: 
+true
+ timestamp= 1619797056000 [RUN] Generate steps
+ timestamp= 1619797056000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -446.11, "y": 10.12, "z": 204.27, "rain": 0.0, "fog": 0.5, "wetness": 0.0, "timeofday": 12.0, "signal": 1.0, "rx": 0.03, "ry": 204.84, "rz": 359.92, "speed": 3.18}
+ timestamp= 1619797056000 [RES] Validate result: 
+true
+ timestamp= 1619797056000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.TimeOfDay(time_of_day=Morning).
+ timestamp= 1619797059000 [RES] API result: 
+{"pose_arr":[{"vx":-2.93,"ay":0,"az":9.81,"ax":0,"pz":10.13,"vy":-2.93,"px":552428.44,"py":4182691.51},{"vx":-2.98,"ay":-0.14,"az":9.81,"ax":0.49,"pz":10.13,"vy":-2.98,"px":552427.49,"py":4182689.16},{"vx":-3.49,"ay":-0.06,"az":9.84,"ax":0.53,"pz":10.12,"vy":-3.49,"px":552426.93,"py":4182687.09},{"vx":-2.95,"ay":0.05,"az":9.81,"ax":0.6,"pz":10.13,"vy":-2.95,"px":552426.74,"py":4182684.69},{"vx":-2.19,"ay":0.28,"az":9.81,"ax":0.54,"pz":10.13,"vy":-2.19,"px":552427.13,"py":4182682.63},{"vx":-1.93,"ay":0.59,"az":9.83,"ax":0.19,"pz":10.12,"vy":-1.93,"px":552427.73,"py":4182681.39}],"traffic_light":[0,0,0,0,0],"state_arr":[{"acceleration":-0.02,"throttle":0,"steering_target":17.34,"brake":14.5,"steering_rate":100,"speed":3.18},{"acceleration":-0.14,"throttle":0,"steering_target":23.41,"brake":14.5,"steering_rate":100,"speed":3.12},{"acceleration":-0.71,"throttle":0,"steering_target":32.88,"brake":16.72,"steering_rate":100,"speed":3.54},{"acceleration":-0.51,"throttle":0,"steering_target":52.32,"brake":14.5,"steering_rate":100,"speed":3.17},{"acceleration":-0.11,"throttle":0,"steering_target":61.05,"brake":14.5,"steering_rate":100,"speed":2.69},{"acceleration":-0.21,"throttle":0,"steering_target":60.21,"brake":14.5,"steering_rate":100,"speed":2.69},{"acceleration":0.37,"throttle":16.35,"steering_target":52.61,"brake":0,"steering_rate":100,"speed":2.34}],"obstacle_arr":[[],[],[],[],[],[]],"action_description":"Evening","ev_state":[-444.688293457031,10.1247606277466,193.431884765625,0,0.5,0,10,0,0.0451445430517197,139.136810302734,359.816558837891,2.3389643248168333],"collision_probability":0}
+ timestamp= 1619797059000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797059000 [RES] Global Validate result: 
+false
+ timestamp= 1619797059000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797059000 [RES] Global Validate result: 
+false
+ timestamp= 1619797059000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797059000 [RES] Global Validate result: 
+false
+ timestamp= 1619797059000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797059000 [RES] Global Validate result: 
+false
+ timestamp= 1619797059000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": 0.37, "throttle": 16.35, "steering_target": 52.61, "brake": 0.0, "steering_rate": 100.0, "speed": 2.34}
+ timestamp= 1619797059000 [RES] Validate result: 
+true
+ timestamp= 1619797059000 [RUN] Generate steps
+ timestamp= 1619797059000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -444.69, "y": 10.12, "z": 193.43, "rain": 0.0, "fog": 0.5, "wetness": 0.0, "timeofday": 10.0, "signal": 0.0, "rx": 0.05, "ry": 139.14, "rz": 359.82, "speed": 2.34}
+ timestamp= 1619797059000 [RES] Validate result: 
+true
+ timestamp= 1619797059000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Weather.Wetness(wetness_level=Moderate).
+ timestamp= 1619797062000 [RES] API result: 
+{"pose_arr":[{"vx":-1.51,"ay":-1.25,"az":9.79,"ax":-1.03,"pz":10.13,"vy":-1.51,"px":552428.63,"py":4182680.23},{"vx":-1.02,"ay":0.44,"az":9.81,"ax":0.25,"pz":10.13,"vy":-1.02,"px":552429.74,"py":4182679.24},{"vx":-1.11,"ay":-0.21,"az":9.82,"ax":-0.31,"pz":10.12,"vy":-1.11,"px":552431.1,"py":4182678.35},{"vx":-0.96,"ay":-0.18,"az":9.83,"ax":-0.61,"pz":10.12,"vy":-0.96,"px":552433.27,"py":4182677.37},{"vx":-0.71,"ay":-2.36,"az":9.77,"ax":-0.57,"pz":10.12,"vy":-0.71,"px":552435.9,"py":4182676.61},{"vx":-0.26,"ay":-5.18,"az":9.74,"ax":-0.38,"pz":10.12,"vy":-0.26,"px":552439.62,"py":4182676}],"traffic_light":[0,1,3,0,0],"state_arr":[{"acceleration":-0.5,"throttle":0,"steering_target":44.01,"brake":14.5,"steering_rate":100,"speed":2.26},{"acceleration":0.43,"throttle":22.66,"steering_target":23.23,"brake":0,"steering_rate":100,"speed":1.98},{"acceleration":0.74,"throttle":63.97,"steering_target":28.72,"brake":0,"steering_rate":100,"speed":2.95},{"acceleration":0.49,"throttle":15.7,"steering_target":20.06,"brake":0,"steering_rate":100,"speed":3.7},{"acceleration":0.81,"throttle":24.07,"steering_target":14.27,"brake":0,"steering_rate":100,"speed":4.08},{"acceleration":1.19,"throttle":28.61,"steering_target":15.31,"brake":0,"steering_rate":100,"speed":4.81}],"obstacle_arr":[[],[],[],[],[],[]],"action_description":"Moderate wetness","ev_state":[-431.998199462891,10.1242418289185,189.829132080078,0,0,0.5,10,-1,359.760986328125,92.8227996826172,359.691589355469,6.348859128254936],"collision_probability":0}
+ timestamp= 1619797062000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797062000 [RES] Global Validate result: 
+false
+ timestamp= 1619797062000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797062000 [RES] Global Validate result: 
+false
+ timestamp= 1619797062000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797062000 [RES] Global Validate result: 
+true
+ timestamp= 1619797062000 [RUN] HardBrake == True
+ timestamp= 1619797062000 [RUN] RESUME STEP @preStep
+ timestamp= 1619797062000 [RUN] Resume step basicflow7
+ timestamp= 1619797062000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797062000 [RES] Global Validate result: 
+false
+ timestamp= 1619797062000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": 1.19, "throttle": 28.61, "steering_target": 15.31, "brake": 0.0, "steering_rate": 100.0, "speed": 4.81}
+ timestamp= 1619797062000 [RES] Validate result: 
+true
+ timestamp= 1619797062000 [RUN] Generate steps
+ timestamp= 1619797062000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -432.0, "y": 10.12, "z": 189.83, "rain": 0.0, "fog": 0.0, "wetness": 0.5, "timeofday": 10.0, "signal": -1.0, "rx": 359.76, "ry": 92.82, "rz": 359.69, "speed": 6.35}
+ timestamp= 1619797062000 [RES] Validate result: 
+true
+ timestamp= 1619797062000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Current_Lane&which_car=SchoolBus).
+ timestamp= 1619797066000 [RES] API result: 
+{"pose_arr":[{"vx":-0.2,"ay":-0.25,"az":9.89,"ax":-0.12,"pz":10.12,"vy":-0.2,"px":552441.72,"py":4182675.87},{"vx":-0.22,"ay":-0.25,"az":9.81,"ax":-0.01,"pz":10.12,"vy":-0.22,"px":552446.2,"py":4182675.71},{"vx":-0.03,"ay":0.58,"az":9.82,"ax":0.01,"pz":10.12,"vy":-0.03,"px":552450.09,"py":4182675.61},{"vx":-0.03,"ay":0,"az":9.81,"ax":0,"pz":10.13,"vy":-0.03,"px":552453.47,"py":4182675.58},{"vx":0.02,"ay":3.61,"az":9.81,"ax":-0.03,"pz":10.13,"vy":0.02,"px":552457.09,"py":4182675.57},{"vx":0.01,"ay":2.47,"az":9.81,"ax":-0.05,"pz":10.13,"vy":0.01,"px":552458.52,"py":4182675.57}],"traffic_light":[3,0,0,0,0,0],"state_arr":[{"acceleration":0.35,"throttle":15.7,"steering_target":0.69,"brake":0,"steering_rate":100,"speed":6.35},{"acceleration":0.58,"throttle":15.7,"steering_target":0.7,"brake":0,"steering_rate":100,"speed":6.49},{"acceleration":-0.18,"throttle":0,"steering_target":3.3,"brake":14.5,"steering_rate":100,"speed":6.61},{"acceleration":-1.98,"throttle":0,"steering_target":-0.19,"brake":28.22,"steering_rate":100,"speed":6.24},{"acceleration":-3.54,"throttle":0,"steering_target":1.41,"brake":44.31,"steering_rate":100,"speed":4.51},{"acceleration":-2.8,"throttle":0,"steering_target":0.77,"brake":38.21,"steering_rate":100,"speed":2.54},{"acceleration":-4.01,"throttle":0,"steering_target":0.41,"brake":50.52,"steering_rate":100,"speed":1.22}],"obstacle_arr":[[],[],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182674.57,"x":552461.93,"z":10.14},"volume":97.37,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182674.8,"x":552463.92,"z":10.13},"volume":84.6,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182674.83,"x":552464.82,"z":10.14},"volume":39.61,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182675.31,"x":552467.48,"z":10.15},"volume":2.86,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182675.76,"x":552471.21,"z":10.65},"volume":1.27,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}]],"action_description":"NPC vehicle (SchoolBus) switching lane (current to right)","ev_state":[-413.787780761719,10.1249017715454,189.559906005859,0,0,0.5,10,-1,0.116723746061325,89.7358016967773,0.000631226866971701,0.0016029681779706397],"collision_probability":0}
+ timestamp= 1619797066000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797066000 [RES] Global Validate result: 
+false
+ timestamp= 1619797066000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797066000 [RES] Global Validate result: 
+false
+ timestamp= 1619797066000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797066000 [RES] Global Validate result: 
+true
+ timestamp= 1619797066000 [RUN] HardBrake == True
+ timestamp= 1619797066000 [RUN] RESUME STEP @preStep
+ timestamp= 1619797066000 [RUN] Resume step basicflow10
+ timestamp= 1619797066000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797066000 [RES] Global Validate result: 
+false
+ timestamp= 1619797066000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": -4.01, "throttle": 0.0, "steering_target": 0.41, "brake": 50.52, "steering_rate": 100.0, "speed": 1.22}
+ timestamp= 1619797066000 [RES] Validate result: 
+true
+ timestamp= 1619797066000 [RUN] Generate steps
+ timestamp= 1619797066000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -413.79, "y": 10.12, "z": 189.56, "rain": 0.0, "fog": 0.0, "wetness": 0.5, "timeofday": 10.0, "signal": -1.0, "rx": 0.12, "ry": 89.74, "rz": 0.0, "speed": 0.0}
+ timestamp= 1619797066000 [RES] Validate result: 
+true
+ timestamp= 1619797066000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Current_Lane&which_car=Hatchback).
+ timestamp= 1619797069000 [RES] API result: 
+{"pose_arr":[{"vx":0,"ay":0,"az":9.8,"ax":0,"pz":10.13,"vy":0,"px":552458.85,"py":4182675.57},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552458.85,"py":4182675.57},{"vx":0.01,"ay":-1.18,"az":9.82,"ax":0.01,"pz":10.12,"vy":0.01,"px":552459.39,"py":4182675.58},{"vx":0.02,"ay":-0.28,"az":9.82,"ax":0,"pz":10.12,"vy":0.02,"px":552460.6,"py":4182675.58},{"vx":0.04,"ay":-0.28,"az":9.83,"ax":-0.01,"pz":10.12,"vy":0.04,"px":552462.97,"py":4182675.6},{"vx":0.04,"ay":-2.57,"az":9.8,"ax":0.01,"pz":10.12,"vy":0.04,"px":552465.07,"py":4182675.63},{"vx":0.07,"ay":-0.72,"az":9.84,"ax":0.01,"pz":10.12,"vy":0.07,"px":552467.28,"py":4182675.65}],"traffic_light":[0,3,3,3,3,3,3],"state_arr":[{"acceleration":-4.17,"throttle":0,"steering_target":0.64,"brake":69.85,"steering_rate":100,"speed":0},{"acceleration":0.28,"throttle":41.56,"steering_target":0.64,"brake":0,"steering_rate":100,"speed":0},{"acceleration":0.55,"throttle":39.79,"steering_target":0.44,"brake":0,"steering_rate":100,"speed":1.44},{"acceleration":0.22,"throttle":15.7,"steering_target":0.55,"brake":0,"steering_rate":100,"speed":2.17},{"acceleration":-0.02,"throttle":0,"steering_target":0.33,"brake":14.5,"steering_rate":100,"speed":3.14},{"acceleration":1,"throttle":27.3,"steering_target":0.23,"brake":0,"steering_rate":100,"speed":3.38},{"acceleration":0.82,"throttle":24.61,"steering_target":0.2,"brake":0,"steering_rate":100,"speed":4.55}],"obstacle_arr":[[],[],[],[],[],[]],"action_description":"NPC vehicle (Hatchback) switching lane (current to right)","ev_state":[-404.714019775391,10.1243934631348,189.657089233398,0,0,0.5,10,-1,359.902862548828,89.2717514038086,-0.00305408285930753,5.136351507174638],"collision_probability":0}
+ timestamp= 1619797069000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797069000 [RES] Global Validate result: 
+false
+ timestamp= 1619797069000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797069000 [RES] Global Validate result: 
+false
+ timestamp= 1619797069000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797069000 [RES] Global Validate result: 
+false
+ timestamp= 1619797069000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797069000 [RES] Global Validate result: 
+false
+ timestamp= 1619797069000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": 0.82, "throttle": 24.61, "steering_target": 0.2, "brake": 0.0, "steering_rate": 100.0, "speed": 4.55}
+ timestamp= 1619797069000 [RES] Validate result: 
+true
+ timestamp= 1619797069000 [RUN] Generate steps
+ timestamp= 1619797069000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -404.71, "y": 10.12, "z": 189.66, "rain": 0.0, "fog": 0.0, "wetness": 0.5, "timeofday": 10.0, "signal": -1.0, "rx": 359.9, "ry": 89.27, "rz": -0.0, "speed": 5.14}
+ timestamp= 1619797069000 [RES] Validate result: 
+true
+ timestamp= 1619797069000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Current_Lane&which_car=SUV).
+ timestamp= 1619797073000 [RES] API result: 
+{"pose_arr":[{"vx":0.07,"ay":-0.27,"az":9.82,"ax":-0.02,"pz":10.12,"vy":0.07,"px":552469.76,"py":4182675.68},{"vx":0.06,"ay":-0.28,"az":9.84,"ax":0.01,"pz":10.12,"vy":0.06,"px":552473.04,"py":4182675.72},{"vx":0.05,"ay":0,"az":9.81,"ax":0,"pz":10.13,"vy":0.05,"px":552476.45,"py":4182675.76},{"vx":0.04,"ay":3.02,"az":9.81,"ax":-0.02,"pz":10.13,"vy":0.04,"px":552479.2,"py":4182675.78},{"vx":0.02,"ay":1.89,"az":9.81,"ax":-0.02,"pz":10.13,"vy":0.02,"px":552480.9,"py":4182675.8},{"vx":0.01,"ay":0.94,"az":9.81,"ax":-0.01,"pz":10.13,"vy":0.01,"px":552481.89,"py":4182675.81}],"traffic_light":[3,3,3,3,3,3],"state_arr":[{"acceleration":1.07,"throttle":15.7,"steering_target":0.05,"brake":0,"steering_rate":100,"speed":5.14},{"acceleration":1.3,"throttle":49.63,"steering_target":-0.5,"brake":0,"steering_rate":100,"speed":5.35},{"acceleration":-1.76,"throttle":0,"steering_target":-0.04,"brake":26.74,"steering_rate":100,"speed":6.27},{"acceleration":-3.62,"throttle":0,"steering_target":0.03,"brake":44.61,"steering_rate":100,"speed":5.12},{"acceleration":-2.87,"throttle":0,"steering_target":0.16,"brake":41.11,"steering_rate":100,"speed":3.47},{"acceleration":-1.64,"throttle":0,"steering_target":-0.07,"brake":28.39,"steering_rate":100,"speed":1.81},{"acceleration":-0.58,"throttle":0,"steering_target":-0.07,"brake":15.42,"steering_rate":100,"speed":1.09},{"acceleration":0.5,"throttle":63.6,"steering_target":-0.14,"brake":0,"steering_rate":100,"speed":0.82}],"obstacle_arr":[[],[{"acceleration":{"y":0,"x":0.02,"z":0},"position":{"y":4182675.76,"x":552487.93,"z":10.61},"volume":7.56,"type":"VEHICLE","velocity":{"y":0.14,"x":1.96,"z":0}}],[{"acceleration":{"y":0.24,"x":0.39,"z":0},"position":{"y":4182676.15,"x":552489.81,"z":10.58},"volume":6.39,"type":"VEHICLE","velocity":{"y":0.43,"x":2.43,"z":0}}],[{"acceleration":{"y":0.17,"x":-0.09,"z":0},"position":{"y":4182676.86,"x":552492.05,"z":10.4},"volume":7.78,"type":"VEHICLE","velocity":{"y":0.5,"x":2.3,"z":0}}],[{"acceleration":{"y":0.51,"x":0.52,"z":0},"position":{"y":4182677.87,"x":552494.81,"z":10.47},"volume":9.95,"type":"VEHICLE","velocity":{"y":0.76,"x":2.47,"z":0}}],[{"acceleration":{"y":0.04,"x":0.23,"z":0},"position":{"y":4182678.49,"x":552496.74,"z":10.49},"volume":6.75,"type":"VEHICLE","velocity":{"y":0.73,"x":2.54,"z":0}}],[{"acceleration":{"y":-0.33,"x":-0.56,"z":0},"position":{"y":4182678.55,"x":552498.52,"z":10.44},"volume":6.33,"type":"VEHICLE","velocity":{"y":0.65,"x":2.48,"z":0}}]],"action_description":"NPC vehicle (SUV) switching lane (current to right)","ev_state":[-390.187561035156,10.1248064041138,189.811920166016,0,0,0.5,10,-1,0.0191635526716709,89.4308166503906,0.000121927048894577,0.8461455811005959],"collision_probability":0}
+ timestamp= 1619797073000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797073000 [RES] Global Validate result: 
+false
+ timestamp= 1619797073000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797073000 [RES] Global Validate result: 
+false
+ timestamp= 1619797073000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797073000 [RES] Global Validate result: 
+true
+ timestamp= 1619797073000 [RUN] HardBrake == True
+ timestamp= 1619797073000 [RUN] RESUME STEP @preStep
+ timestamp= 1619797073000 [RUN] Resume step basicflow16
+ timestamp= 1619797073000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797073000 [RES] Global Validate result: 
+false
+ timestamp= 1619797073000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": 0.5, "throttle": 63.6, "steering_target": -0.14, "brake": 0.0, "steering_rate": 100.0, "speed": 0.82}
+ timestamp= 1619797073000 [RES] Validate result: 
+true
+ timestamp= 1619797073000 [RUN] Generate steps
+ timestamp= 1619797073000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -390.19, "y": 10.12, "z": 189.81, "rain": 0.0, "fog": 0.0, "wetness": 0.5, "timeofday": 10.0, "signal": -1.0, "rx": 0.02, "ry": 89.43, "rz": 0.0, "speed": 0.85}
+ timestamp= 1619797073000 [RES] Validate result: 
+true
+ timestamp= 1619797073000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Weather.Fog(fog_level=Heavy).
+ timestamp= 1619797077000 [RES] API result: 
+{"pose_arr":[{"vx":0.01,"ay":-1.43,"az":9.81,"ax":0.01,"pz":10.13,"vy":0.01,"px":552482.47,"py":4182675.82},{"vx":0.03,"ay":-1.19,"az":9.84,"ax":0.01,"pz":10.12,"vy":0.03,"px":552483.77,"py":4182675.83},{"vx":0.04,"ay":-2.97,"az":9.78,"ax":0.03,"pz":10.12,"vy":0.04,"px":552486.38,"py":4182675.86},{"vx":0.05,"ay":-0.56,"az":9.81,"ax":0.01,"pz":10.12,"vy":0.05,"px":552488.72,"py":4182675.88},{"vx":0.05,"ay":-0.61,"az":9.81,"ax":0,"pz":10.12,"vy":0.05,"px":552492.11,"py":4182675.91},{"vx":0.05,"ay":-0.48,"az":9.81,"ax":0,"pz":10.12,"vy":0.05,"px":552495.77,"py":4182675.94},{"vx":0.06,"ay":-0.25,"az":9.87,"ax":0,"pz":10.12,"vy":0.06,"px":552499.7,"py":4182675.98}],"traffic_light":[2,2,2,2,3],"state_arr":[{"acceleration":1.31,"throttle":55.3,"steering_target":-0.11,"brake":0,"steering_rate":100,"speed":1.8},{"acceleration":0.58,"throttle":20.29,"steering_target":-0.18,"brake":0,"steering_rate":100,"speed":3.65},{"acceleration":0.43,"throttle":15.7,"steering_target":0.03,"brake":0,"steering_rate":100,"speed":4.42},{"acceleration":0.84,"throttle":24.75,"steering_target":0.04,"brake":0,"steering_rate":100,"speed":4.68},{"acceleration":1.14,"throttle":15.7,"steering_target":-0.05,"brake":0,"steering_rate":100,"speed":4.95},{"acceleration":0.88,"throttle":24.83,"steering_target":-0.01,"brake":0,"steering_rate":100,"speed":5.21},{"acceleration":0.3,"throttle":15.7,"steering_target":-0.07,"brake":0,"steering_rate":100,"speed":6.5}],"obstacle_arr":[[{"acceleration":{"y":-0.33,"x":-0.57,"z":0},"position":{"y":4182678.82,"x":552501.36,"z":10.58},"volume":6.07,"type":"VEHICLE","velocity":{"y":0.37,"x":1.96,"z":0}}],[{"acceleration":{"y":-0.33,"x":-0.58,"z":0},"position":{"y":4182678.85,"x":552502.43,"z":10.55},"volume":5.24,"type":"VEHICLE","velocity":{"y":0.1,"x":1.49,"z":0}}],[{"acceleration":{"y":-0.3,"x":-0.41,"z":0},"position":{"y":4182678.9,"x":552504.08,"z":10.52},"volume":4.46,"type":"VEHICLE","velocity":{"y":-0.07,"x":1.25,"z":0}}],[{"acceleration":{"y":-0.25,"x":-0.2,"z":0},"position":{"y":4182678.84,"x":552507.07,"z":10.4},"volume":3.42,"type":"VEHICLE","velocity":{"y":-0.22,"x":1.1,"z":0}}],[{"acceleration":{"y":-0.15,"x":0.25,"z":0},"position":{"y":4182678.94,"x":552511.76,"z":10.39},"volume":4.18,"type":"VEHICLE","velocity":{"y":-0.37,"x":1.22,"z":0}}],[{"acceleration":{"y":-0.14,"x":0.52,"z":0},"position":{"y":4182678.96,"x":552515.97,"z":10.59},"volume":7.39,"type":"VEHICLE","velocity":{"y":-0.48,"x":1.72,"z":0}}],[{"acceleration":{"y":-0.17,"x":0.5,"z":0},"position":{"y":4182678.94,"x":552519.79,"z":10.39},"volume":7.17,"type":"VEHICLE","velocity":{"y":-0.57,"x":2.19,"z":0}}]],"action_description":"Heavy fog","ev_state":[-372.800140380859,10.1241369247437,189.975814819336,0,1,0,10,-1,359.860107421875,89.4628295898438,0.000506809563376009,6.577882881455029],"collision_probability":0}
+ timestamp= 1619797077000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797077000 [RES] Global Validate result: 
+false
+ timestamp= 1619797077000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797077000 [RES] Global Validate result: 
+false
+ timestamp= 1619797077000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797077000 [RES] Global Validate result: 
+false
+ timestamp= 1619797077000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797077000 [RES] Global Validate result: 
+false
+ timestamp= 1619797077000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": 0.3, "throttle": 15.7, "steering_target": -0.07, "brake": 0.0, "steering_rate": 100.0, "speed": 6.5}
+ timestamp= 1619797077000 [RES] Validate result: 
+true
+ timestamp= 1619797077000 [RUN] Generate steps
+ timestamp= 1619797077000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -372.8, "y": 10.12, "z": 189.98, "rain": 0.0, "fog": 1.0, "wetness": 0.0, "timeofday": 10.0, "signal": -1.0, "rx": 359.86, "ry": 89.46, "rz": 0.0, "speed": 6.58}
+ timestamp= 1619797077000 [RES] Validate result: 
+true
+ timestamp= 1619797077000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleMaintainLane(which_lane=Current_Lane&which_car=BoxTruck).
+ timestamp= 1619797081000 [RES] API result: 
+{"pose_arr":[{"vx":0.06,"ay":-0.74,"az":9.82,"ax":0.01,"pz":10.12,"vy":0.06,"px":552501.67,"py":4182676},{"vx":0.01,"ay":0.45,"az":10.03,"ax":-0.01,"pz":10.11,"vy":0.01,"px":552503.33,"py":4182676.01},{"vx":0.01,"ay":1.82,"az":9.76,"ax":-0.02,"pz":10.13,"vy":0.01,"px":552504.14,"py":4182676.02},{"vx":0,"ay":0.76,"az":9.81,"ax":-0.01,"pz":10.13,"vy":0,"px":552504.39,"py":4182676.02},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.13,"vy":0,"px":552504.44,"py":4182676.02},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552504.44,"py":4182676.02},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552504.44,"py":4182676.02}],"traffic_light":[1,0,0,0,0,0,0],"state_arr":[{"acceleration":0.93,"throttle":15.7,"steering_target":-0.13,"brake":0,"steering_rate":100,"speed":6.58},{"acceleration":0.97,"throttle":54.33,"steering_target":0.18,"brake":0,"steering_rate":100,"speed":1.6},{"acceleration":-1.96,"throttle":0,"steering_target":0.32,"brake":31.32,"steering_rate":100,"speed":1.51},{"acceleration":-0.95,"throttle":0,"steering_target":0.07,"brake":20.8,"steering_rate":100,"speed":0.54},{"acceleration":-0.03,"throttle":0,"steering_target":-0.04,"brake":17.45,"steering_rate":100,"speed":0.13},{"acceleration":-4.08,"throttle":0,"steering_target":-0.04,"brake":67.34,"steering_rate":100,"speed":0.03},{"acceleration":-0.1,"throttle":0,"steering_target":-0.04,"brake":49.63,"steering_rate":100,"speed":0},{"acceleration":-0.11,"throttle":0,"steering_target":-0.04,"brake":49.96,"steering_rate":100,"speed":0}],"obstacle_arr":[[],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182675.86,"x":552506.71,"z":10.88},"volume":1.54,"type":"VEHICLE","velocity":{"y":0.09,"x":0.88,"z":0}}],[{"acceleration":{"y":-0.1,"x":0.73,"z":0},"position":{"y":4182675.8,"x":552507.84,"z":10.55},"volume":6.07,"type":"VEHICLE","velocity":{"y":0,"x":1.45,"z":0}}],[{"acceleration":{"y":-0.21,"x":0.89,"z":0},"position":{"y":4182675.8,"x":552508.6,"z":10.6},"volume":6.63,"type":"VEHICLE","velocity":{"y":-0.11,"x":1.94,"z":0}}],[{"acceleration":{"y":0.07,"x":0.8,"z":0},"position":{"y":4182675.81,"x":552509.16,"z":10.53},"volume":6.76,"type":"VEHICLE","velocity":{"y":-0.04,"x":2.62,"z":0}}],[{"acceleration":{"y":0.04,"x":-0.38,"z":0},"position":{"y":4182675.66,"x":552511.29,"z":10.13},"volume":20.87,"type":"VEHICLE","velocity":{"y":-0.02,"x":2.28,"z":0}}],[{"acceleration":{"y":0.04,"x":-2.28,"z":0},"position":{"y":4182675.86,"x":552512.06,"z":10.5},"volume":17.33,"type":"VEHICLE","velocity":{"y":0.02,"x":0.57,"z":0}}]],"action_description":"NPC vehicle (BoxTruck) driving on the current lane","ev_state":[-368.193389892578,10.1248035430908,190.01139831543,0,1,0,10,1,-0.00000681166147842305,89.5993041992188,0.00000827603980724234,0.00006553933576466893],"collision_probability":1}
+ timestamp= 1619797081000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797081000 [RES] Global Validate result: 
+true
+ timestamp= 1619797081000 [RUN] Collision == True
+ timestamp= 1619797081000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797081000 [RES] Global Validate result: 
+false
+ timestamp= 1619797081000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797081000 [RES] Global Validate result: 
+false
+ timestamp= 1619797081000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797081000 [RES] Global Validate result: 
+false
+ timestamp= 1619797081000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": -0.11, "throttle": 0.0, "steering_target": -0.04, "brake": 49.96, "steering_rate": 100.0, "speed": 0.0}
+ timestamp= 1619797081000 [RES] Validate result: 
+true
+ timestamp= 1619797081000 [RUN] Generate steps
+ timestamp= 1619797081000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -368.19, "y": 10.12, "z": 190.01, "rain": 0.0, "fog": 1.0, "wetness": 0.0, "timeofday": 10.0, "signal": 1.0, "rx": -0.0, "ry": 89.6, "rz": 0.0, "speed": 0.0}
+ timestamp= 1619797081000 [RES] Validate result: 
+true
+ timestamp= 1619797081000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Right_Lane&which_car=Sedan).
+ timestamp= 1619797085000 [RES] API result: 
+{"pose_arr":[{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552504.44,"py":4182676.02},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552504.44,"py":4182676.02},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552504.44,"py":4182676.02},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552504.44,"py":4182676.02},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552504.44,"py":4182676.02},{"vx":0,"ay":-3.55,"az":9.81,"ax":0.02,"pz":10.12,"vy":0,"px":552504.58,"py":4182676.02},{"vx":0.02,"ay":1.71,"az":9.84,"ax":-0.01,"pz":10.12,"vy":0.02,"px":552505.53,"py":4182676.03}],"traffic_light":[0,0,0,0,0],"state_arr":[{"acceleration":-3,"throttle":0,"steering_target":-0.04,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-0.04,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-0.04,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-0.04,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-0.16,"throttle":0,"steering_target":-0.04,"brake":53.86,"steering_rate":100,"speed":0},{"acceleration":0.46,"throttle":78.02,"steering_target":-0.03,"brake":0,"steering_rate":100,"speed":0.12},{"acceleration":0.76,"throttle":73.4,"steering_target":0.28,"brake":0,"steering_rate":100,"speed":1.66},{"acceleration":-1.09,"throttle":0,"steering_target":0.25,"brake":22.16,"steering_rate":100,"speed":1.67}],"obstacle_arr":[[{"acceleration":{"y":0.12,"x":-0.92,"z":0},"position":{"y":4182675.82,"x":552512.78,"z":10.53},"volume":18.35,"type":"VEHICLE","velocity":{"y":0.07,"x":0.66,"z":0}}],[{"acceleration":{"y":0.06,"x":0.16,"z":0},"position":{"y":4182675.87,"x":552513.56,"z":10.58},"volume":17.57,"type":"VEHICLE","velocity":{"y":0.1,"x":0.85,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182668.1,"x":552525.32,"z":10.33},"volume":7.61,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":-0.08,"x":0.23,"z":0},"position":{"y":4182675.85,"x":552514.36,"z":10.45},"volume":19.8,"type":"VEHICLE","velocity":{"y":-0.04,"x":0.98,"z":0}}],[{"acceleration":{"y":-0.04,"x":0.41,"z":0},"position":{"y":4182675.83,"x":552515.16,"z":10.51},"volume":19.93,"type":"VEHICLE","velocity":{"y":-0.04,"x":1.11,"z":0}}],[],[],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182675.86,"x":552517.21,"z":10.5},"volume":19.87,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}]],"action_description":"NPC vehicle (Sedan) switching lane (right to left)","ev_state":[-366.346313476563,10.1248350143433,190.02653503418,0,1,0,10,-1,0.0950862765312195,89.5396957397461,-0.000245653704041615,1.2883957522639509],"collision_probability":0}
+ timestamp= 1619797085000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797085000 [RES] Global Validate result: 
+false
+ timestamp= 1619797085000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797085000 [RES] Global Validate result: 
+false
+ timestamp= 1619797085000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797085000 [RES] Global Validate result: 
+false
+ timestamp= 1619797085000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797085000 [RES] Global Validate result: 
+false
+ timestamp= 1619797085000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": -1.09, "throttle": 0.0, "steering_target": 0.25, "brake": 22.16, "steering_rate": 100.0, "speed": 1.67}
+ timestamp= 1619797085000 [RES] Validate result: 
+true
+ timestamp= 1619797085000 [RUN] Generate steps
+ timestamp= 1619797085000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -366.35, "y": 10.12, "z": 190.03, "rain": 0.0, "fog": 1.0, "wetness": 0.0, "timeofday": 10.0, "signal": -1.0, "rx": 0.1, "ry": 89.54, "rz": -0.0, "speed": 1.29}
+ timestamp= 1619797085000 [RES] Validate result: 
+true
+ timestamp= 1619797085000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleMaintainLane(which_lane=Left_Lane&which_car=Jeep).
+ timestamp= 1619797089000 [RES] API result: 
+{"pose_arr":[{"vx":0.01,"ay":1.83,"az":9.81,"ax":-0.02,"pz":10.13,"vy":0.01,"px":552506.26,"py":4182676.04},{"vx":0.01,"ay":0.47,"az":9.81,"ax":0,"pz":10.13,"vy":0.01,"px":552506.93,"py":4182676.04},{"vx":0.02,"ay":-0.76,"az":9.82,"ax":0.01,"pz":10.12,"vy":0.02,"px":552507.83,"py":4182676.05},{"vx":0.02,"ay":2.8,"az":9.84,"ax":-0.03,"pz":10.13,"vy":0.02,"px":552509.09,"py":4182676.06},{"vx":0.01,"ay":1.04,"az":9.81,"ax":-0.01,"pz":10.13,"vy":0.01,"px":552509.92,"py":4182676.07},{"vx":0,"ay":-1.36,"az":9.81,"ax":0.01,"pz":10.13,"vy":0,"px":552510.11,"py":4182676.07},{"vx":0.01,"ay":0.47,"az":9.81,"ax":0,"pz":10.12,"vy":0.01,"px":552510.63,"py":4182676.07},{"vx":0.01,"ay":-1.13,"az":9.81,"ax":0.01,"pz":10.12,"vy":0.01,"px":552511.19,"py":4182676.08}],"traffic_light":[0,0,0,0,0,0,0],"state_arr":[{"acceleration":-0.29,"throttle":0,"steering_target":0.15,"brake":14.5,"steering_rate":100,"speed":1.29},{"acceleration":-0.04,"throttle":0,"steering_target":0.1,"brake":14.5,"steering_rate":100,"speed":1.04},{"acceleration":0.67,"throttle":81.36,"steering_target":0.14,"brake":0,"steering_rate":100,"speed":2.04},{"acceleration":-1.51,"throttle":0,"steering_target":0.07,"brake":26.14,"steering_rate":100,"speed":2.54},{"acceleration":-3,"throttle":0,"steering_target":-0.01,"brake":41.3,"steering_rate":100,"speed":1.18},{"acceleration":0.07,"throttle":16.1,"steering_target":-0.02,"brake":0,"steering_rate":100,"speed":0.06},{"acceleration":-0.5,"throttle":0,"steering_target":-0.01,"brake":14.5,"steering_rate":100,"speed":1.15},{"acceleration":0.41,"throttle":26.53,"steering_target":-0.02,"brake":0,"steering_rate":100,"speed":0.91},{"acceleration":0.94,"throttle":44.83,"steering_target":-0.02,"brake":0,"steering_rate":100,"speed":1.34}],"obstacle_arr":[[{"acceleration":{"y":0.03,"x":0.28,"z":0},"position":{"y":4182675.86,"x":552518.38,"z":10.54},"volume":17.82,"type":"VEHICLE","velocity":{"y":0.04,"x":1.25,"z":0}}],[{"acceleration":{"y":-0.01,"x":0.01,"z":0},"position":{"y":4182682.35,"x":552508.31,"z":10.12},"volume":11.3,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182679.89,"x":552509.75,"z":10.37},"volume":8.88,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182675.82,"x":552519.65,"z":10.56},"volume":17.98,"type":"VEHICLE","velocity":{"y":0.08,"x":0.82,"z":0}}],[{"acceleration":{"y":0.02,"x":-0.01,"z":0},"position":{"y":4182679.55,"x":552510.26,"z":10.38},"volume":9,"type":"VEHICLE","velocity":{"y":-0.37,"x":0.53,"z":0}},{"acceleration":{"y":0,"x":-0.03,"z":0},"position":{"y":4182675.85,"x":552520.77,"z":10.38},"volume":20.88,"type":"VEHICLE","velocity":{"y":0.05,"x":0.92,"z":0}}],[{"acceleration":{"y":0.61,"x":-0.75,"z":0},"position":{"y":4182679.49,"x":552510.51,"z":10.44},"volume":7.99,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":-0.22,"x":0.61,"z":0},"position":{"y":4182675.83,"x":552521.63,"z":10.59},"volume":15.44,"type":"VEHICLE","velocity":{"y":-0.12,"x":1.34,"z":0}}],[{"acceleration":{"y":0.15,"x":-0.26,"z":0},"position":{"y":4182679.48,"x":552510.34,"z":10.4},"volume":8.03,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":-0.03,"x":0.19,"z":0},"position":{"y":4182675.76,"x":552521.93,"z":10.11},"volume":24.27,"type":"VEHICLE","velocity":{"y":-0.04,"x":1.41,"z":0}}],[{"acceleration":{"y":0.02,"x":-0.04,"z":0},"position":{"y":4182679.38,"x":552510.42,"z":10.47},"volume":6.79,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":-0.05,"x":0.52,"z":0},"position":{"y":4182675.74,"x":552522.82,"z":10.52},"volume":15.72,"type":"VEHICLE","velocity":{"y":-0.11,"x":1.95,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182679.14,"x":552510.52,"z":10.77},"volume":4.21,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}]],"action_description":"NPC vehicle (Jeep) driving on the left lane","ev_state":[-361.268920898438,10.1247529983521,190.072036743164,0,1,0,10,-1,359.953308105469,89.4881820678711,0.0000333338648488279,1.3357475325273713],"collision_probability":0.183}
+ timestamp= 1619797089000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797089000 [RES] Global Validate result: 
+false
+ timestamp= 1619797089000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797089000 [RES] Global Validate result: 
+false
+ timestamp= 1619797089000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797089000 [RES] Global Validate result: 
+false
+ timestamp= 1619797089000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797089000 [RES] Global Validate result: 
+false
+ timestamp= 1619797089000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": 0.94, "throttle": 44.83, "steering_target": -0.02, "brake": 0.0, "steering_rate": 100.0, "speed": 1.34}
+ timestamp= 1619797089000 [RES] Validate result: 
+true
+ timestamp= 1619797089000 [RUN] Generate steps
+ timestamp= 1619797089000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -361.27, "y": 10.12, "z": 190.07, "rain": 0.0, "fog": 1.0, "wetness": 0.0, "timeofday": 10.0, "signal": -1.0, "rx": 359.95, "ry": 89.49, "rz": 0.0, "speed": 1.34}
+ timestamp= 1619797089000 [RES] Validate result: 
+true
+ timestamp= 1619797089000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Left_Lane&which_car=Jeep).
+ timestamp= 1619797094000 [RES] API result: 
+{"pose_arr":[{"vx":0.02,"ay":-4.46,"az":9.78,"ax":0.04,"pz":10.12,"vy":0.02,"px":552511.62,"py":4182676.08},{"vx":0.04,"ay":-3.07,"az":9.81,"ax":0.03,"pz":10.12,"vy":0.04,"px":552513.79,"py":4182676.1},{"vx":0.04,"ay":-0.27,"az":9.82,"ax":0,"pz":10.12,"vy":0.04,"px":552515.62,"py":4182676.12},{"vx":0.04,"ay":-0.49,"az":9.81,"ax":0,"pz":10.12,"vy":0.04,"px":552518.96,"py":4182676.15},{"vx":0.04,"ay":-0.67,"az":9.81,"ax":0.01,"pz":10.12,"vy":0.04,"px":552521.18,"py":4182676.16},{"vx":0.03,"ay":0,"az":9.81,"ax":0,"pz":10.13,"vy":0.03,"px":552523.44,"py":4182676.18},{"vx":0.01,"ay":2.13,"az":9.76,"ax":-0.01,"pz":10.13,"vy":0.01,"px":552524.95,"py":4182676.19},{"vx":0.01,"ay":2.01,"az":9.81,"ax":-0.01,"pz":10.13,"vy":0.01,"px":552525.72,"py":4182676.2}],"traffic_light":[0,0,0,0,0,0],"state_arr":[{"acceleration":1.12,"throttle":41.05,"steering_target":-0.03,"brake":0,"steering_rate":100,"speed":2.59},{"acceleration":0.06,"throttle":15.7,"steering_target":-0.09,"brake":0,"steering_rate":100,"speed":4.38},{"acceleration":-0.05,"throttle":0,"steering_target":-0.12,"brake":14.5,"steering_rate":100,"speed":4.53},{"acceleration":0.64,"throttle":15.7,"steering_target":-0.05,"brake":0,"steering_rate":100,"speed":4.68},{"acceleration":-0.17,"throttle":0,"steering_target":-0.06,"brake":14.5,"steering_rate":100,"speed":4.93},{"acceleration":-1.86,"throttle":0,"steering_target":-0.07,"brake":30.16,"steering_rate":100,"speed":4.69},{"acceleration":-2.34,"throttle":0,"steering_target":-0.12,"brake":34.17,"steering_rate":100,"speed":2.59},{"acceleration":-2.22,"throttle":0,"steering_target":-0.05,"brake":33.35,"steering_rate":100,"speed":1.64}],"obstacle_arr":[[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182679.42,"x":552510.06,"z":10.4},"volume":7.18,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182679.44,"x":552509.88,"z":10.38},"volume":8.65,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182679,"x":552509.64,"z":10.39},"volume":8.13,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182676.04,"x":552512.19,"z":10.13},"volume":15.14,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":-1.63,"x":0.39,"z":0},"position":{"y":4182671.26,"x":552514.69,"z":10.13},"volume":10.09,"type":"VEHICLE","velocity":{"y":-1.48,"x":0.31,"z":0}},{"acceleration":{"y":-0.02,"x":2.02,"z":0},"position":{"y":4182675.88,"x":552525.72,"z":10.51},"volume":16.89,"type":"VEHICLE","velocity":{"y":0.01,"x":4.13,"z":0}}],[{"acceleration":{"y":-1.98,"x":-0.16,"z":0},"position":{"y":4182664.85,"x":552516.98,"z":10.29},"volume":10.38,"type":"VEHICLE","velocity":{"y":-2.75,"x":0.4,"z":0}},{"acceleration":{"y":-0.03,"x":2.46,"z":0},"position":{"y":4182675.9,"x":552526.65,"z":10.61},"volume":4.82,"type":"VEHICLE","velocity":{"y":0,"x":5.57,"z":0}},{"acceleration":{"y":-0.01,"x":0,"z":0},"position":{"y":4182661.84,"x":552537.7,"z":10.4},"volume":5.01,"type":"VEHICLE","velocity":{"y":-1.84,"x":0.09,"z":0}}],[{"acceleration":{"y":-2.29,"x":-0.09,"z":0},"position":{"y":4182660.02,"x":552517.88,"z":10.28},"volume":7.04,"type":"VEHICLE","velocity":{"y":-4.15,"x":0.31,"z":0}},{"acceleration":{"y":-0.26,"x":-0.51,"z":0},"position":{"y":4182675.9,"x":552528.66,"z":10.53},"volume":0.24,"type":"VEHICLE","velocity":{"y":-0.25,"x":4.55,"z":0}}],[{"acceleration":{"y":-0.33,"x":-0.01,"z":0},"position":{"y":4182654.45,"x":552518,"z":10.52},"volume":2.78,"type":"VEHICLE","velocity":{"y":-4.96,"x":0.27,"z":0}},{"acceleration":{"y":0.19,"x":-1.76,"z":0},"position":{"y":4182675.86,"x":552529.9,"z":10.54},"volume":7.01,"type":"VEHICLE","velocity":{"y":-0.04,"x":3.2,"z":0}}]],"action_description":"NPC vehicle (Jeep) switching lane (left to right)","ev_state":[-346.914825439453,10.1248683929443,190.184432983398,0,1,0,10,-1,0.130026951432228,89.6065979003906,-0.0000415815484302584,0.8251710727251469],"collision_probability":1}
+ timestamp= 1619797094000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797094000 [RES] Global Validate result: 
+true
+ timestamp= 1619797094000 [RUN] Collision == True
+ timestamp= 1619797094000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797094000 [RES] Global Validate result: 
+false
+ timestamp= 1619797094000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797094000 [RES] Global Validate result: 
+true
+ timestamp= 1619797094000 [RUN] HardBrake == True
+ timestamp= 1619797094000 [RUN] RESUME STEP @preStep
+ timestamp= 1619797094000 [RUN] Resume step basicflow31
+ timestamp= 1619797094000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797094000 [RES] Global Validate result: 
+false
+ timestamp= 1619797094000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": -2.22, "throttle": 0.0, "steering_target": -0.05, "brake": 33.35, "steering_rate": 100.0, "speed": 1.64}
+ timestamp= 1619797094000 [RES] Validate result: 
+true
+ timestamp= 1619797094000 [RUN] Generate steps
+ timestamp= 1619797094000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -346.91, "y": 10.12, "z": 190.18, "rain": 0.0, "fog": 1.0, "wetness": 0.0, "timeofday": 10.0, "signal": -1.0, "rx": 0.13, "ry": 89.61, "rz": -0.0, "speed": 0.83}
+ timestamp= 1619797094000 [RES] Validate result: 
+true
+ timestamp= 1619797094000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Agents.Pedestrians.WalkRandomly(which_lane=Left_Lane).
+ timestamp= 1619797098000 [RES] API result: 
+{"pose_arr":[{"vx":0,"ay":1,"az":9.81,"ax":-0.01,"pz":10.13,"vy":0,"px":552525.9,"py":4182676.2},{"vx":0,"ay":0.45,"az":9.81,"ax":0,"pz":10.13,"vy":0,"px":552526.05,"py":4182676.2},{"vx":0,"ay":-0.78,"az":9.81,"ax":0.01,"pz":10.12,"vy":0,"px":552526.36,"py":4182676.2},{"vx":0.01,"ay":-0.69,"az":9.81,"ax":0,"pz":10.12,"vy":0.01,"px":552526.98,"py":4182676.2},{"vx":0.01,"ay":-0.28,"az":9.81,"ax":0,"pz":10.12,"vy":0.01,"px":552527.69,"py":4182676.21},{"vx":0.01,"ay":0.48,"az":9.83,"ax":0,"pz":10.12,"vy":0.01,"px":552528.65,"py":4182676.21},{"vx":0.01,"ay":0.48,"az":9.81,"ax":0,"pz":10.13,"vy":0.01,"px":552529.49,"py":4182676.22},{"vx":0.02,"ay":-4.46,"az":9.78,"ax":0.03,"pz":10.12,"vy":0.02,"px":552530.56,"py":4182676.23}],"traffic_light":[0,0,0,0,0,0],"state_arr":[{"acceleration":-1.21,"throttle":0,"steering_target":-0.07,"brake":23.53,"steering_rate":100,"speed":0.83},{"acceleration":-0.27,"throttle":0,"steering_target":-0.08,"brake":14.5,"steering_rate":100,"speed":0.32},{"acceleration":0.25,"throttle":39.35,"steering_target":-0.08,"brake":0,"steering_rate":100,"speed":0.55},{"acceleration":0.28,"throttle":47.08,"steering_target":-0.07,"brake":0,"steering_rate":100,"speed":1.07},{"acceleration":0.3,"throttle":15.7,"steering_target":-0.07,"brake":0,"steering_rate":100,"speed":1.48},{"acceleration":-0.08,"throttle":0,"steering_target":-0.07,"brake":14.5,"steering_rate":100,"speed":1.61},{"acceleration":-0.63,"throttle":0,"steering_target":-0.07,"brake":15.97,"steering_rate":100,"speed":2.02},{"acceleration":-0.3,"throttle":0,"steering_target":-0.08,"brake":14.5,"steering_rate":100,"speed":1.82},{"acceleration":0.66,"throttle":80.59,"steering_target":-0.07,"brake":0,"steering_rate":100,"speed":1.96}],"obstacle_arr":[[{"acceleration":{"y":0.34,"x":-2.04,"z":0},"position":{"y":4182675.76,"x":552531.49,"z":10.13},"volume":19.53,"type":"VEHICLE","velocity":{"y":0.05,"x":2.81,"z":0}},{"acceleration":{"y":-0.29,"x":0.08,"z":0},"position":{"y":4182690.45,"x":552519.61,"z":10.37},"volume":0.05,"type":"PEDESTRIAN","velocity":{"y":-0.15,"x":1.29,"z":0}}],[{"acceleration":{"y":0.24,"x":-1.41,"z":0},"position":{"y":4182675.94,"x":552532.9,"z":10.47},"volume":17.23,"type":"VEHICLE","velocity":{"y":0.26,"x":1.4,"z":0}}],[{"acceleration":{"y":-0.16,"x":0.1,"z":0},"position":{"y":4182675.92,"x":552534.77,"z":10.48},"volume":19.55,"type":"VEHICLE","velocity":{"y":0.06,"x":1.7,"z":0}}],[{"acceleration":{"y":-0.35,"x":0.5,"z":0},"position":{"y":4182675.94,"x":552536.13,"z":10.48},"volume":20.81,"type":"VEHICLE","velocity":{"y":-0.11,"x":1.99,"z":0}}],[{"acceleration":{"y":-0.16,"x":-0.11,"z":0},"position":{"y":4182675.87,"x":552537.1,"z":10.13},"volume":24.4,"type":"VEHICLE","velocity":{"y":-0.05,"x":1.85,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182690.47,"x":552519.34,"z":10.62},"volume":0.06,"type":"PEDESTRIAN","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":-0.17,"x":0.96,"z":0},"position":{"y":4182675.9,"x":552538.53,"z":10.5},"volume":20.13,"type":"VEHICLE","velocity":{"y":-0.24,"x":2.79,"z":0}}],[],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182675.88,"x":552542.28,"z":10.51},"volume":17.68,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}]],"action_description":"Pedestrian crossing the road (left to right)","ev_state":[-341.597137451172,10.1246242523193,190.217468261719,0,1,0,10,-1,359.882781982422,89.6521072387695,0.000251463556196541,2.778311803760619],"collision_probability":0}
+ timestamp= 1619797098000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797098000 [RES] Global Validate result: 
+false
+ timestamp= 1619797098000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797098000 [RES] Global Validate result: 
+false
+ timestamp= 1619797098000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797098000 [RES] Global Validate result: 
+false
+ timestamp= 1619797098000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797098000 [RES] Global Validate result: 
+false
+ timestamp= 1619797098000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": 0.66, "throttle": 80.59, "steering_target": -0.07, "brake": 0.0, "steering_rate": 100.0, "speed": 1.96}
+ timestamp= 1619797098000 [RES] Validate result: 
+true
+ timestamp= 1619797098000 [RUN] Generate steps
+ timestamp= 1619797098000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -341.6, "y": 10.12, "z": 190.22, "rain": 0.0, "fog": 1.0, "wetness": 0.0, "timeofday": 10.0, "signal": -1.0, "rx": 359.88, "ry": 89.65, "rz": 0.0, "speed": 2.78}
+ timestamp= 1619797098000 [RES] Validate result: 
+true
+ timestamp= 1619797098000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Current_Lane&which_car=Sedan).
+ timestamp= 1619797103000 [RES] API result: 
+{"pose_arr":[{"vx":0.02,"ay":1.1,"az":9.84,"ax":-0.01,"pz":10.12,"vy":0.02,"px":552531.12,"py":4182676.23},{"vx":0.52,"ay":0,"az":9.81,"ax":0,"pz":10.13,"vy":0.52,"px":552532.09,"py":4182676.27},{"vx":0.08,"ay":0.07,"az":9.81,"ax":2.43,"pz":10.13,"vy":0.08,"px":552532.72,"py":4182676.34},{"vx":0.37,"ay":-1.48,"az":9.82,"ax":0.14,"pz":10.12,"vy":0.37,"px":552533.5,"py":4182676.42},{"vx":0.53,"ay":-0.92,"az":9.81,"ax":0.11,"pz":10.12,"vy":0.53,"px":552534.77,"py":4182676.59},{"vx":0.78,"ay":-0.8,"az":9.83,"ax":0.1,"pz":10.12,"vy":0.78,"px":552536.56,"py":4182676.88},{"vx":0.98,"ay":0.5,"az":9.82,"ax":-0.18,"pz":10.12,"vy":0.98,"px":552538.74,"py":4182677.32},{"vx":1.1,"ay":-0.31,"az":9.81,"ax":-0.1,"pz":10.12,"vy":1.1,"px":552540.52,"py":4182677.75},{"vx":0.84,"ay":-1.14,"az":9.8,"ax":0.08,"pz":10.12,"vy":0.84,"px":552542.47,"py":4182678.26}],"traffic_light":[0,1,3,3,3,3,3],"state_arr":[{"acceleration":-3.05,"throttle":0,"steering_target":0.04,"brake":40.72,"steering_rate":100,"speed":2.78},{"acceleration":-0.5,"throttle":0,"steering_target":-11.18,"brake":14.5,"steering_rate":100,"speed":1.55},{"acceleration":0.74,"throttle":77,"steering_target":13.98,"brake":0,"steering_rate":100,"speed":1.29},{"acceleration":0.52,"throttle":19.17,"steering_target":10.58,"brake":0,"steering_rate":100,"speed":2.46},{"acceleration":1.27,"throttle":77.82,"steering_target":8.9,"brake":0,"steering_rate":100,"speed":2.75},{"acceleration":0.93,"throttle":26.19,"steering_target":5.18,"brake":0,"steering_rate":100,"speed":3.48},{"acceleration":-0.06,"throttle":0,"steering_target":8.25,"brake":14.5,"steering_rate":100,"speed":4.15},{"acceleration":0.35,"throttle":15.7,"steering_target":5.95,"brake":0,"steering_rate":100,"speed":4.05},{"acceleration":1.12,"throttle":47.09,"steering_target":-12.95,"brake":0,"steering_rate":100,"speed":4.12}],"obstacle_arr":[[],[{"acceleration":{"y":0.01,"x":0,"z":0},"position":{"y":4182679.15,"x":552563.38,"z":11.12},"volume":0.01,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0.01,"x":-0.01,"z":0},"position":{"y":4182676.48,"x":552549.39,"z":11.01},"volume":0.56,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.95,"x":552563.33,"z":10.58},"volume":0.17,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182676.29,"x":552549.74,"z":10.37},"volume":2.5,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182679.05,"x":552563.68,"z":10.7},"volume":1.3,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182676.3,"x":552550.74,"z":10.4},"volume":2.69,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182643.31,"x":552514.3,"z":10.93},"volume":2.47,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182679.11,"x":552563.52,"z":10.73},"volume":0.45,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182676.38,"x":552552.14,"z":10.45},"volume":3.55,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.87,"x":552566.81,"z":10.74},"volume":0.67,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182676.78,"x":552553.93,"z":10.59},"volume":3.82,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182676.45,"x":552545.23,"z":10.46},"volume":0.14,"type":"PEDESTRIAN","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182679.34,"x":552570.77,"z":10.55},"volume":0.98,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182676.78,"x":552554.34,"z":10.49},"volume":3.11,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0.02,"x":0.01,"z":0},"position":{"y":4182676,"x":552544.9,"z":10.39},"volume":0.11,"type":"PEDESTRIAN","velocity":{"y":-0.48,"x":-0.22,"z":0}}],[{"acceleration":{"y":-0.36,"x":1.06,"z":0},"position":{"y":4182680.49,"x":552574.81,"z":10.27},"volume":0.21,"type":"VEHICLE","velocity":{"y":-0.02,"x":0.4,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182677.39,"x":552555.05,"z":10.46},"volume":3.6,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0.3,"x":-0.1,"z":0},"position":{"y":4182675.64,"x":552544.64,"z":10.38},"volume":0.42,"type":"PEDESTRIAN","velocity":{"y":-0.46,"x":-0.54,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182676.05,"x":552562.37,"z":11.09},"volume":0.84,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}]],"action_description":"NPC vehicle (Sedan) switching lane (current to right)","ev_state":[-329.499176025391,10.1244630813599,192.662368774414,0,1,0,10,1,359.926910400391,78.4699249267578,0.205487757921219,4.674221523935457],"collision_probability":0.308}
+ timestamp= 1619797103000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797103000 [RES] Global Validate result: 
+false
+ timestamp= 1619797103000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797103000 [RES] Global Validate result: 
+false
+ timestamp= 1619797103000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797103000 [RES] Global Validate result: 
+false
+ timestamp= 1619797103000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797103000 [RES] Global Validate result: 
+false
+ timestamp= 1619797103000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": 1.12, "throttle": 47.09, "steering_target": -12.95, "brake": 0.0, "steering_rate": 100.0, "speed": 4.12}
+ timestamp= 1619797103000 [RES] Validate result: 
+true
+ timestamp= 1619797103000 [RUN] Generate steps
+ timestamp= 1619797103000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -329.5, "y": 10.12, "z": 192.66, "rain": 0.0, "fog": 1.0, "wetness": 0.0, "timeofday": 10.0, "signal": 1.0, "rx": 359.93, "ry": 78.47, "rz": 0.21, "speed": 4.67}
+ timestamp= 1619797103000 [RES] Validate result: 
+true
+ timestamp= 1619797103000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.TimeOfDay(time_of_day=Noon).
+ timestamp= 1619797108000 [RES] API result: 
+{"pose_arr":[{"vx":1.06,"ay":-2.26,"az":9.79,"ax":0.47,"pz":10.12,"vy":1.06,"px":552545.34,"py":4182678.83},{"vx":0.97,"ay":-0.33,"az":9.82,"ax":-0.63,"pz":10.12,"vy":0.97,"px":552547.46,"py":4182679.24},{"vx":0.01,"ay":1.23,"az":9.83,"ax":1.18,"pz":10.12,"vy":0.01,"px":552550.52,"py":4182679.69},{"vx":0.26,"ay":3.74,"az":9.82,"ax":-0.22,"pz":10.13,"vy":0.26,"px":552553.24,"py":4182679.8},{"vx":0.1,"ay":3.13,"az":9.81,"ax":-0.35,"pz":10.13,"vy":0.1,"px":552554.37,"py":4182679.85},{"vx":0.05,"ay":1.87,"az":9.81,"ax":-0.07,"pz":10.13,"vy":0.05,"px":552555.17,"py":4182679.89},{"vx":0.01,"ay":0.84,"az":9.81,"ax":-0.04,"pz":10.13,"vy":0.01,"px":552555.64,"py":4182679.91},{"vx":0,"ay":0.45,"az":9.81,"ax":-0.01,"pz":10.13,"vy":0,"px":552555.83,"py":4182679.92}],"traffic_light":[3,3,0,3,3,3,3],"state_arr":[{"acceleration":0.95,"throttle":15.7,"steering_target":-2.85,"brake":0,"steering_rate":100,"speed":4.67},{"acceleration":0.14,"throttle":15.7,"steering_target":-2.69,"brake":0,"steering_rate":100,"speed":5.42},{"acceleration":0.14,"throttle":15.7,"steering_target":-25.49,"brake":0,"steering_rate":100,"speed":5.55},{"acceleration":-2.5,"throttle":0,"steering_target":-4.69,"brake":35.01,"steering_rate":100,"speed":5.28},{"acceleration":-3.13,"throttle":0,"steering_target":4.09,"brake":41.01,"steering_rate":100,"speed":3.61},{"acceleration":-2.6,"throttle":0,"steering_target":-2.81,"brake":36.47,"steering_rate":100,"speed":2.35},{"acceleration":-1.69,"throttle":0,"steering_target":-2.94,"brake":28.95,"steering_rate":100,"speed":1.27},{"acceleration":-0.79,"throttle":0,"steering_target":-4.66,"brake":19.04,"steering_rate":100,"speed":0.68},{"acceleration":-0.34,"throttle":0,"steering_target":-5.15,"brake":14.5,"steering_rate":100,"speed":0.35},{"acceleration":-3,"throttle":0,"steering_target":-5.38,"brake":42.75,"steering_rate":100,"speed":0.19}],"obstacle_arr":[[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182677.29,"x":552556.16,"z":10.37},"volume":6.62,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0.09,"x":-0.12,"z":0},"position":{"y":4182675.36,"x":552544.52,"z":10.56},"volume":0.17,"type":"PEDESTRIAN","velocity":{"y":-0.49,"x":-0.34,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182675.71,"x":552563.23,"z":11.17},"volume":1.65,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182677.38,"x":552556.45,"z":10.4},"volume":4.61,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0.09,"x":-0.9,"z":0},"position":{"y":4182674.79,"x":552544.2,"z":10.45},"volume":0.24,"type":"PEDESTRIAN","velocity":{"y":-0.44,"x":-1.12,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182676.09,"x":552563.18,"z":10.99},"volume":1.25,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0.03,"z":0},"position":{"y":4182671.42,"x":552545.15,"z":10.35},"volume":0.77,"type":"PEDESTRIAN","velocity":{"y":-0.14,"x":-0.67,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182677.82,"x":552557.02,"z":10.38},"volume":6.53,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":-0.06,"x":-0.37,"z":0},"position":{"y":4182674.28,"x":552543.92,"z":10.13},"volume":0.23,"type":"PEDESTRIAN","velocity":{"y":-0.53,"x":-1.16,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182676.75,"x":552564.87,"z":10.57},"volume":3.97,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182671.25,"x":552545.75,"z":10.31},"volume":2.38,"type":"PEDESTRIAN","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182677.59,"x":552557.53,"z":10.4},"volume":6.74,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0.11,"x":0.11,"z":0},"position":{"y":4182674.35,"x":552543.33,"z":10.47},"volume":0.06,"type":"PEDESTRIAN","velocity":{"y":-0.23,"x":-0.99,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182675.84,"x":552570.21,"z":10.17},"volume":6.98,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182671.64,"x":552545.38,"z":10.3},"volume":2.38,"type":"PEDESTRIAN","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182685.61,"x":552592.43,"z":10.89},"volume":3.95,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182677.77,"x":552558.42,"z":10.39},"volume":7.71,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0.25,"x":1.25,"z":0},"position":{"y":4182677.86,"x":552558.98,"z":10.43},"volume":7,"type":"VEHICLE","velocity":{"y":0.22,"x":1.04,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182673.74,"x":552542.97,"z":10.29},"volume":0.09,"type":"PEDESTRIAN","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":-0.05,"x":-0.35,"z":0},"position":{"y":4182677.93,"x":552559.41,"z":10.39},"volume":7.21,"type":"VEHICLE","velocity":{"y":0.12,"x":0.55,"z":0}}],[{"acceleration":{"y":-0.3,"x":-1.27,"z":0},"position":{"y":4182677.96,"x":552559.67,"z":10.39},"volume":7.64,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}]],"action_description":"Noon","ev_state":[-316.799957275391,10.1248226165771,193.946640014648,0,1,0,14,1,0.029935559257865,87.8332290649414,-0.0011460178066045,0.19351032193419057],"collision_probability":0.117}
+ timestamp= 1619797108000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797108000 [RES] Global Validate result: 
+false
+ timestamp= 1619797108000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797108000 [RES] Global Validate result: 
+false
+ timestamp= 1619797108000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797108000 [RES] Global Validate result: 
+true
+ timestamp= 1619797108000 [RUN] HardBrake == True
+ timestamp= 1619797108000 [RUN] RESUME STEP @preStep
+ timestamp= 1619797108000 [RUN] Resume step basicflow40
+ timestamp= 1619797108000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797108000 [RES] Global Validate result: 
+false
+ timestamp= 1619797108000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": -3.0, "throttle": 0.0, "steering_target": -5.38, "brake": 42.75, "steering_rate": 100.0, "speed": 0.19}
+ timestamp= 1619797108000 [RES] Validate result: 
+true
+ timestamp= 1619797108000 [RUN] Generate steps
+ timestamp= 1619797108000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -316.8, "y": 10.12, "z": 193.95, "rain": 0.0, "fog": 1.0, "wetness": 0.0, "timeofday": 14.0, "signal": 1.0, "rx": 0.03, "ry": 87.83, "rz": -0.0, "speed": 0.19}
+ timestamp= 1619797108000 [RES] Validate result: 
+true
+ timestamp= 1619797108000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Right_Lane&which_car=Sedan).
+ timestamp= 1619797113000 [RES] API result: 
+{"pose_arr":[{"vx":0,"ay":0.01,"az":9.81,"ax":0,"pz":10.13,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92}],"traffic_light":[3,3,3,3,3,3,3],"state_arr":[{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":69.94,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":70,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":70,"steering_rate":100,"speed":0}],"obstacle_arr":[[{"acceleration":{"y":-0.18,"x":-0.91,"z":0},"position":{"y":4182678.03,"x":552559.91,"z":10.4},"volume":7.46,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":-0.02,"x":-0.12,"z":0},"position":{"y":4182678.07,"x":552560.11,"z":10.41},"volume":7.49,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182672.97,"x":552578.34,"z":10.11},"volume":7.59,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":-0.02,"z":0},"position":{"y":4182678.07,"x":552560.18,"z":10.41},"volume":7.65,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182673.53,"x":552579.13,"z":10.11},"volume":8.5,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.08,"x":552560.25,"z":10.41},"volume":7.41,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0.01,"x":0.01,"z":0},"position":{"y":4182680.56,"x":552586.39,"z":10.56},"volume":4.39,"type":"VEHICLE","velocity":{"y":0.05,"x":0.05,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.03,"x":552560.41,"z":10.41},"volume":7.49,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182686.92,"x":552590.43,"z":10.28},"volume":4.44,"type":"VEHICLE","velocity":{"y":0.29,"x":0.18,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.05,"x":552560.41,"z":10.39},"volume":7.3,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.07,"x":552560.72,"z":10.41},"volume":7.82,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.11,"x":552560.75,"z":10.39},"volume":7.78,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.11,"x":552560.82,"z":10.39},"volume":7.49,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}]],"action_description":"NPC vehicle (Sedan) switching lane (right to left)","ev_state":[-316.790069580078,10.1248035430908,193.946807861328,0,1,0,14,1,-0.00000685410395817598,87.8401718139648,0.00000880828702065628,0.00002419224065025564],"collision_probability":0}
+ timestamp= 1619797113000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797113000 [RES] Global Validate result: 
+false
+ timestamp= 1619797113000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797113000 [RES] Global Validate result: 
+false
+ timestamp= 1619797113000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797113000 [RES] Global Validate result: 
+false
+ timestamp= 1619797113000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797113000 [RES] Global Validate result: 
+false
+ timestamp= 1619797113000 [RUN] Validate step: 
+The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {"acceleration": -3.0, "throttle": 0.0, "steering_target": -5.37, "brake": 70.0, "steering_rate": 100.0, "speed": 0.0}
+ timestamp= 1619797113000 [RES] Validate result: 
+true
+ timestamp= 1619797113000 [RUN] Generate steps
+ timestamp= 1619797113000 [RUN] Validate step: 
+The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {"x": -316.79, "y": 10.12, "z": 193.95, "rain": 0.0, "fog": 1.0, "wetness": 0.0, "timeofday": 14.0, "signal": 1.0, "rx": -0.0, "ry": 87.84, "rz": 0.0, "speed": 0.0}
+ timestamp= 1619797113000 [RES] Validate result: 
+true
+ timestamp= 1619797113000 [RUN] Execute API step: 
+The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Right_Lane&which_car=SUV).
+ timestamp= 1619797117000 [RES] API result: 
+{"pose_arr":[{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92},{"vx":0,"ay":0,"az":9.81,"ax":0,"pz":10.12,"vy":0,"px":552555.85,"py":4182679.92}],"traffic_light":[3,3,3,3,3,3,3,3],"state_arr":[{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":70,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":70,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":70,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":70,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":70,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":70,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":69.99,"steering_rate":100,"speed":0},{"acceleration":-3,"throttle":0,"steering_target":-5.37,"brake":69.99,"steering_rate":100,"speed":0}],"obstacle_arr":[[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.18,"x":552560.87,"z":10.39},"volume":7.49,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.14,"x":552561.03,"z":10.38},"volume":8.03,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0,"x":0.01,"z":0},"position":{"y":4182672.89,"x":552578.1,"z":10.11},"volume":11.9,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.15,"x":552561.04,"z":10.39},"volume":7.49,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0.01,"x":0.02,"z":0},"position":{"y":4182675.96,"x":552582.34,"z":10.14},"volume":11.26,"type":"VEHICLE","velocity":{"y":1.54,"x":2.49,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.13,"x":552561.05,"z":10.39},"volume":7.23,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0.04,"x":0.02,"z":0},"position":{"y":4182681.6,"x":552586.45,"z":10.54},"volume":3.81,"type":"VEHICLE","velocity":{"y":1.54,"x":2.49,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.22,"x":552561.18,"z":10.36},"volume":7.71,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0.02,"x":0.01,"z":0},"position":{"y":4182689.58,"x":552591.1,"z":10.15},"volume":6.05,"type":"VEHICLE","velocity":{"y":1.59,"x":2.51,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.18,"x":552561.19,"z":10.38},"volume":7.37,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}},{"acceleration":{"y":0.02,"x":0,"z":0},"position":{"y":4182697.44,"x":552594.39,"z":10.81},"volume":1.36,"type":"VEHICLE","velocity":{"y":1.7,"x":2.54,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.23,"x":552561.37,"z":10.4},"volume":7.39,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}],[{"acceleration":{"y":0,"x":0,"z":0},"position":{"y":4182678.19,"x":552561.42,"z":10.39},"volume":7.59,"type":"VEHICLE","velocity":{"y":0,"x":0,"z":0}}]],"action_description":"NPC vehicle (SUV) switching lane (right to left)","ev_state":[-316.790069580078,10.1248035430908,193.946807861328,0,1,0,14,0,-0.00000624481253908016,87.8401718139648,0.00000909870868781582,0.00006616117511393966],"collision_probability":0}
+ timestamp= 1619797117000 [RUN] Validate G1 Guard Condition: 
+The ego vehicle E Detection.Collision == True.
+ timestamp= 1619797117000 [RES] Global Validate result: 
+false
+ timestamp= 1619797117000 [RUN] Validate G2 Guard Condition: 
+The ego vehicle E Detection.OffRoad == True.
+ timestamp= 1619797117000 [RES] Global Validate result: 
+true
+ timestamp= 1619797117000 [RUN] OffRoad == True
+ timestamp= 1619797117000 [RUN] The simulator S INVOKES API Command.Simulation.Stop() to stop simulation.
+ timestamp= 1619797117000 [WARNING] The test system Stop the Simulator S!
+ timestamp= 1619797117000 [RUN] ABORT.
+ timestamp= 1619797117000 [ERROR] The test system Abort!
+ timestamp= 1619797117000 [RUN] Validate G3 Guard Condition: 
+The ego vehicle E Detection.HardBrake == True.
+ timestamp= 1619797117000 [RES] Global Validate result: 
+false
+ timestamp= 1619797117000 [RUN] Validate G4 Guard Condition: 
+The ego vehicle E Detection.ArrivalTest == True.
+ timestamp= 1619797118000 [RES] Global Validate result: 
+false
+ timestamp= 1619797118000 [RES] Basic PostCondition Validate result: 
+false
+ timestamp= 1619797118000 [STOP] numberOfStep: 49 basicFlow: 
+[{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -440.05, \"y\": 10.12, \"z\": 215.34, \"rain\": 0.0, \"fog\": 0.0, \"wetness\": 0.0, \"timeofday\": 12.0, \"signal\": 1.0, \"rx\": 359.95, \"ry\": 209.95, \"rz\": 0.0, \"speed\": 2.54}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Weather.Fog(fog_level=Moderate).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": -0.35, \"throttle\": 0.0, \"steering_target\": 12.6, \"brake\": 14.5, \"steering_rate\": 100.0, \"speed\": 3.44}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -446.11, \"y\": 10.12, \"z\": 204.27, \"rain\": 0.0, \"fog\": 0.5, \"wetness\": 0.0, \"timeofday\": 12.0, \"signal\": 1.0, \"rx\": 0.03, \"ry\": 204.84, \"rz\": 359.92, \"speed\": 3.18}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.TimeOfDay(time_of_day=Morning).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": 0.37, \"throttle\": 16.35, \"steering_target\": 52.61, \"brake\": 0.0, \"steering_rate\": 100.0, \"speed\": 2.34}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -444.69, \"y\": 10.12, \"z\": 193.43, \"rain\": 0.0, \"fog\": 0.5, \"wetness\": 0.0, \"timeofday\": 10.0, \"signal\": 0.0, \"rx\": 0.05, \"ry\": 139.14, \"rz\": 359.82, \"speed\": 2.34}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Weather.Wetness(wetness_level=Moderate).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": 1.19, \"throttle\": 28.61, \"steering_target\": 15.31, \"brake\": 0.0, \"steering_rate\": 100.0, \"speed\": 4.81}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -432.0, \"y\": 10.12, \"z\": 189.83, \"rain\": 0.0, \"fog\": 0.0, \"wetness\": 0.5, \"timeofday\": 10.0, \"signal\": -1.0, \"rx\": 359.76, \"ry\": 92.82, \"rz\": 359.69, \"speed\": 6.35}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Current_Lane&which_car=SchoolBus).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": -4.01, \"throttle\": 0.0, \"steering_target\": 0.41, \"brake\": 50.52, \"steering_rate\": 100.0, \"speed\": 1.22}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -413.79, \"y\": 10.12, \"z\": 189.56, \"rain\": 0.0, \"fog\": 0.0, \"wetness\": 0.5, \"timeofday\": 10.0, \"signal\": -1.0, \"rx\": 0.12, \"ry\": 89.74, \"rz\": 0.0, \"speed\": 0.0}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Current_Lane&which_car=Hatchback).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": 0.82, \"throttle\": 24.61, \"steering_target\": 0.2, \"brake\": 0.0, \"steering_rate\": 100.0, \"speed\": 4.55}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -404.71, \"y\": 10.12, \"z\": 189.66, \"rain\": 0.0, \"fog\": 0.0, \"wetness\": 0.5, \"timeofday\": 10.0, \"signal\": -1.0, \"rx\": 359.9, \"ry\": 89.27, \"rz\": -0.0, \"speed\": 5.14}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Current_Lane&which_car=SUV).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": 0.5, \"throttle\": 63.6, \"steering_target\": -0.14, \"brake\": 0.0, \"steering_rate\": 100.0, \"speed\": 0.82}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -390.19, \"y\": 10.12, \"z\": 189.81, \"rain\": 0.0, \"fog\": 0.0, \"wetness\": 0.5, \"timeofday\": 10.0, \"signal\": -1.0, \"rx\": 0.02, \"ry\": 89.43, \"rz\": 0.0, \"speed\": 0.85}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Weather.Fog(fog_level=Heavy).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": 0.3, \"throttle\": 15.7, \"steering_target\": -0.07, \"brake\": 0.0, \"steering_rate\": 100.0, \"speed\": 6.5}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -372.8, \"y\": 10.12, \"z\": 189.98, \"rain\": 0.0, \"fog\": 1.0, \"wetness\": 0.0, \"timeofday\": 10.0, \"signal\": -1.0, \"rx\": 359.86, \"ry\": 89.46, \"rz\": 0.0, \"speed\": 6.58}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleMaintainLane(which_lane=Current_Lane&which_car=BoxTruck).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": -0.11, \"throttle\": 0.0, \"steering_target\": -0.04, \"brake\": 49.96, \"steering_rate\": 100.0, \"speed\": 0.0}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -368.19, \"y\": 10.12, \"z\": 190.01, \"rain\": 0.0, \"fog\": 1.0, \"wetness\": 0.0, \"timeofday\": 10.0, \"signal\": 1.0, \"rx\": -0.0, \"ry\": 89.6, \"rz\": 0.0, \"speed\": 0.0}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Right_Lane&which_car=Sedan).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": -1.09, \"throttle\": 0.0, \"steering_target\": 0.25, \"brake\": 22.16, \"steering_rate\": 100.0, \"speed\": 1.67}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -366.35, \"y\": 10.12, \"z\": 190.03, \"rain\": 0.0, \"fog\": 1.0, \"wetness\": 0.0, \"timeofday\": 10.0, \"signal\": -1.0, \"rx\": 0.1, \"ry\": 89.54, \"rz\": -0.0, \"speed\": 1.29}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleMaintainLane(which_lane=Left_Lane&which_car=Jeep).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": 0.94, \"throttle\": 44.83, \"steering_target\": -0.02, \"brake\": 0.0, \"steering_rate\": 100.0, \"speed\": 1.34}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -361.27, \"y\": 10.12, \"z\": 190.07, \"rain\": 0.0, \"fog\": 1.0, \"wetness\": 0.0, \"timeofday\": 10.0, \"signal\": -1.0, \"rx\": 359.95, \"ry\": 89.49, \"rz\": 0.0, \"speed\": 1.34}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Left_Lane&which_car=Jeep).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": -2.22, \"throttle\": 0.0, \"steering_target\": -0.05, \"brake\": 33.35, \"steering_rate\": 100.0, \"speed\": 1.64}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -346.91, \"y\": 10.12, \"z\": 190.18, \"rain\": 0.0, \"fog\": 1.0, \"wetness\": 0.0, \"timeofday\": 10.0, \"signal\": -1.0, \"rx\": 0.13, \"ry\": 89.61, \"rz\": -0.0, \"speed\": 0.83}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Agents.Pedestrians.WalkRandomly(which_lane=Left_Lane).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": 0.66, \"throttle\": 80.59, \"steering_target\": -0.07, \"brake\": 0.0, \"steering_rate\": 100.0, \"speed\": 1.96}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -341.6, \"y\": 10.12, \"z\": 190.22, \"rain\": 0.0, \"fog\": 1.0, \"wetness\": 0.0, \"timeofday\": 10.0, \"signal\": -1.0, \"rx\": 359.88, \"ry\": 89.65, \"rz\": 0.0, \"speed\": 2.78}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Current_Lane&which_car=Sedan).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": 1.12, \"throttle\": 47.09, \"steering_target\": -12.95, \"brake\": 0.0, \"steering_rate\": 100.0, \"speed\": 4.12}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -329.5, \"y\": 10.12, \"z\": 192.66, \"rain\": 0.0, \"fog\": 1.0, \"wetness\": 0.0, \"timeofday\": 10.0, \"signal\": 1.0, \"rx\": 359.93, \"ry\": 78.47, \"rz\": 0.21, \"speed\": 4.67}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.TimeOfDay(time_of_day=Noon).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": -3.0, \"throttle\": 0.0, \"steering_target\": -5.38, \"brake\": 42.75, \"steering_rate\": 100.0, \"speed\": 0.19}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -316.8, \"y\": 10.12, \"z\": 193.95, \"rain\": 0.0, \"fog\": 1.0, \"wetness\": 0.0, \"timeofday\": 14.0, \"signal\": 1.0, \"rx\": 0.03, \"ry\": 87.83, \"rz\": -0.0, \"speed\": 0.19}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Right_Lane&which_car=Sedan).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": -3.0, \"throttle\": 0.0, \"steering_target\": -5.37, \"brake\": 70.0, \"steering_rate\": 100.0, \"speed\": 0.0}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the simulator S Status.GetEnvironment is nearly equal to {\"x\": -316.79, \"y\": 10.12, \"z\": 193.95, \"rain\": 0.0, \"fog\": 1.0, \"wetness\": 0.0, \"timeofday\": 14.0, \"signal\": 1.0, \"rx\": -0.0, \"ry\": 87.84, \"rz\": 0.0, \"speed\": 0.0}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The environment controller C INVOKES API Control.Agents.NPCVehicle.NPCVehicleSwitchLane(which_lane=Right_Lane&which_car=SUV).","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"The test system VALIDATES THAT the Apollo A Status.GetControl is nearly equal to {\"acceleration\": -3.0, \"throttle\": 0.0, \"steering_target\": -5.37, \"brake\": 69.99, \"steering_rate\": 100.0, \"speed\": 0.0}","natures":[]},{"name":"","description":"","eClass":"Sentence","content":"","natures":[]}]
