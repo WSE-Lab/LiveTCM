@@ -1,5 +1,7 @@
 # LiveTCM:  Restricted Natural Language and Model-based Adaptive Test Generation for Autonomous Driving
 
+> Y. Shi, C. Lu, M. Zhang, H. Zhang, T. Yue and S. Ali, "Restricted Natural Language and Model-based Adaptive Test Generation for Autonomous Driving," 2021 ACM/IEEE 24th International Conference on Model Driven Engineering Languages and Systems (MODELS), 2021, pp. 101-111, doi: 10.1109/MODELS50736.2021.00019.
+
 - [LiveTCM: Restricted Natural Language and Model-based Adaptive Test Generation for Autonomous Driving](#livetcm--a-tool-with-restricted-natural-language-and-model-based-adaptive-test-generation-for-autonomous-driving)
   - [1. Contribution](#1-contribution)
   - [2. Overview](#2-Overview)
